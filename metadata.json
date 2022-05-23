@@ -6,8 +6,8 @@
             "Sev 1 Vulnerabilities": 0,
             "Sev 2 Vulnerabilities": 0
         },
-        "MRMG Approval": "True",
-        "Data Usage Approval": "True",
+        "MRMG Approval": true,
+        "Data Usage Approval": true,
         "NR_EntityGuid": "MzM1NTQyMXxBUE18QVBQTElDQVRJT058MTA5ODM0MzA1MA"
     }
 }
