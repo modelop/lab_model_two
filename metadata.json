@@ -1,4 +1,5 @@
 {
+    "modelMethodology":"Regression",
     "custom": {
         "Base Model": "Housing Price Predictor",
         "Security": {
