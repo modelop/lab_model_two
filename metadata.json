@@ -9,5 +9,13 @@
         "MRMG Approval": true,
         "Data Usage Approval": true,
         "NR_EntityGuid": "MzM1NTQyMXxBUE18QVBQTElDQVRJT058MTA5ODM0MzA1MA"
-    }
+    },      
+    "roi": {
+        "baselineMetricsTNR": 0,
+        "baselineMetricsTPR": 0,
+        "costMultipliersTP": 1,
+        "costMultipliersTN": -1,
+        "costMultipliersFP": 0,
+        "costMultipliersFN": 0
+      }
 }
