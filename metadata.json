@@ -15,7 +15,7 @@
         "baselineMetricsTPR": 0,
         "costMultipliersTP": 1,
         "costMultipliersTN": -1,
-        "costMultipliersFP": 0,
-        "costMultipliersFN": 0
+        "costMultipliersFP": 1,
+        "costMultipliersFN": -1
       }
 }
