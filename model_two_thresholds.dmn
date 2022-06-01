@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_12e2f76" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="Decision_0z07a0v" name="Model_Two_Thresholds">
+    <decisionTable id="DecisionTable_1382qgl" hitPolicy="FIRST">
+      <input id="Input_1" label="GarageCars_number_outliers" camunda:inputVariable="BsmtQual_number_outliers">
+        <inputExpression id="InputExpression_1" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0kuwld6" label="BsmtQual_number_outliers" camunda:inputVariable="BsmtQual_number_outliers">
+        <inputExpression id="LiteralExpression_13f5iv9" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1r0d5sy" label="YearBuilt_number_outliers" camunda:inputVariable="YearBuilt_number_outliers">
+        <inputExpression id="LiteralExpression_05nvnqe" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="passes" name="passes" typeRef="boolean" />
+      <output id="OutputClause_0wyxafh" label="reason" name="reason" typeRef="string" />
+      <output id="OutputClause_0gdb6uf" label="category" name="category" typeRef="string" />
+      <rule id="DecisionRule_0rhacob">
+        <inputEntry id="UnaryTests_11t54gu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zi6tlk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ju28z1">
+          <text>&gt;3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ptk9ev">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q75nh7">
+          <text>"Too many year built outliers"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m0sk06">
+          <text>"Critical"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rfvnzi">
+        <inputEntry id="UnaryTests_141a3g6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jtm5el">
+          <text>&gt; 5</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i8cjbk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xb4jyq">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03y1bti">
+          <text>"Too many basement outliers"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fzo5m7">
+          <text>"Severe"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f3hn9r">
+        <inputEntry id="UnaryTests_1uy5ny2">
+          <text>&gt;= 1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y96v34">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jvhkgs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qy49x2">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0q3ful5">
+          <text>"Too many garage capacity outliers"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rfxwq5">
+          <text>"Info"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0z07a0v">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
