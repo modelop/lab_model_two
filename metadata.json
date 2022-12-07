@@ -1,0 +1,12 @@
+{
+	"roi":{
+		"baselineMetricsTNR": 0,
+    		"baselineMetricsTPR": 0,
+    		"costMultipliersTP": 1,
+    		"costMultipliersFP": 1,
+    		"costMultipliersTN": -1,
+    		"costMultipliersFN": -1
+	},
+"modelMethodology" : "Regression",
+
+}
