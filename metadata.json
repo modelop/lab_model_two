@@ -9,6 +9,14 @@
 	},
 	"modelMethodology" : "Regression",
 	"custom": {
-        "Matt's custom metadata": "hurray"
+		"Matt's custom metadata": "hurray",
+			"Jenkins Job info": {
+			   "job name": "asdf",
+			   "job path": "/job/asdf",
+			   "parameters": {
+				  "param1": "asdf",
+				  "param2": 3.43
+			   }
+			}
+		 }
     }
-}
