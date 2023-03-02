@@ -7,6 +7,8 @@
     		"costMultipliersTN": -1,
     		"costMultipliersFN": -1
 	},
-	"modelMethodology" : "Regression"
-
+	"modelMethodology" : "Regression",
+	"custom": {
+        "Matt's custom metadata": "hurray"
+    }
 }
