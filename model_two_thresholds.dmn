@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_12e2f76" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_12e2f76" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="Decision_0z07a0v" name="Model_Two_Thresholds">
     <decisionTable id="DecisionTable_1382qgl" hitPolicy="FIRST">
       <input id="Input_1" label="GarageCars_number_outliers" camunda:inputVariable="BsmtQual_number_outliers">
@@ -20,6 +20,11 @@
       <output id="Output_1" label="passes" name="passes" typeRef="boolean" />
       <output id="OutputClause_0wyxafh" label="reason" name="reason" typeRef="string" />
       <output id="OutputClause_0gdb6uf" label="category" name="category" typeRef="string" />
+      <output id="OutputClause_1f11q5t" label="action" name="action" typeRef="string">
+        <outputValues id="UnaryTests_0wmk8xp">
+          <text>"None","Notify","Jira","Undeploy"</text>
+        </outputValues>
+      </output>
       <rule id="DecisionRule_0rhacob">
         <inputEntry id="UnaryTests_11t54gu">
           <text></text>
@@ -38,6 +43,9 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0m0sk06">
           <text>"Critical"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05yndjm">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1rfvnzi">
@@ -59,6 +67,9 @@
         <outputEntry id="LiteralExpression_1fzo5m7">
           <text>"Severe"</text>
         </outputEntry>
+        <outputEntry id="LiteralExpression_0t88w90">
+          <text></text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_1f3hn9r">
         <inputEntry id="UnaryTests_1uy5ny2">
@@ -78,6 +89,9 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0rfxwq5">
           <text>"Info"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_053lhp3">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
